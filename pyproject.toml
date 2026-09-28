@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-recovery-lab"
+version = "0.1.0"
+description = "A controlled experiment on coding-agent recovery from tool faults"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["aci-patch-agent @ git+https://github.com/altaal/aci-patch-agent.git@42a2683b643b3b9af2f034529032444accf0c849"]
+
+[tool.setuptools.packages.find]
+include = ["agent_recovery_lab*"]
