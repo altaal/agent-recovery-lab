@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "task": "flatten-once",
+  "issue": "Flatten one level of a list of lists, preserving order. Inner items can themselves be lists and must remain unchanged.",
+  "created_at": "2026-09-28T23:37:49.634358+00:00",
+  "model": "qwen/qwen3-next-80b-a3b-instruct",
+  "show_initial_source": false,
+  "max_actions": 15,
+  "max_total_tokens": 32000,
+  "status": "passed",
+  "passed": true,
+  "submitted": true,
+  "actions": 6,
+  "model_calls": 6,
+  "prompt_tokens": 4060,
+  "completion_tokens": 166,
+  "reported_cost_usd": 0.000548,
+  "seconds": 4.937,
+  "initial_source": "def flatten_once(groups):\n    return groups[0] if groups else []\n",
+  "final_source": "def flatten_once(groups):\n    result = []\n    for group in groups:\n        for item in group:\n            result.append(item)\n    return result\n",
+  "evaluation": {
+    "passed": true,
+    "checks": 5,
+    "failures": [],
+    "error": null
+  },
+  "patch": "--- a/solution.py\n+++ b/solution.py\n@@ -1,2 +1,6 @@\n def flatten_once(groups):\n-    return groups[0] if groups else []\n+    result = []\n+    for group in groups:\n+        for item in group:\n+            result.append(item)\n+    return result\n",
+  "responses": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_64538457d0f8477983b017e1",
+            "function": {
+              "name": "view",
+              "arguments": "{\"start\": 1, \"end\": 10}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 25,
+        "total_tokens": 507,
+        "cost": 7.088e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.088e-05,
+          "upstream_inference_prompt_cost": 4.338e-05,
+          "upstream_inference_completions_cost": 2.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638664-J0mzFFQXLQQlptwnw5Nq"
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_037832e07232404eaa67bcd8",
+            "function": {
+              "name": "view",
+              "arguments": "{\"start\": 1, \"end\": 2}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 539,
+        "completion_tokens": 24,
+        "total_tokens": 563,
+        "cost": 7.491e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.491e-05,
+          "upstream_inference_prompt_cost": 4.851e-05,
+          "upstream_inference_completions_cost": 2.64e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638665-EGOXG41PHibZHmMYSEZS"
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_9325ef5f787c419a81fe0c9f",
+            "function": {
+              "name": "edit",
+              "arguments": "{\"start\": 1, \"end\": 2, \"replacement\": \"def flatten_once(groups):\\n    result = []\\n    for group in groups:\\n        for item in group:\\n            result.append(item)\\n    return result\"}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 608,
+        "completion_tokens": 76,
+        "total_tokens": 684,
+        "cost": 0.00013832,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00013832,
+          "upstream_inference_prompt_cost": 5.472e-05,
+          "upstream_inference_completions_cost": 8.36e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638665-TJDqXI5jCEkUEQoyMzau"
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_97720155a8ba44da8b013127",
+            "function": {
+              "name": "test",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 749,
+        "completion_tokens": 14,
+        "total_tokens": 763,
+        "cost": 8.281e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.281e-05,
+          "upstream_inference_prompt_cost": 6.741e-05,
+          "upstream_inference_completions_cost": 1.54e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638666-fkBgXildBg95UO1TSsIm"
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_0472414edb804e7283ed1b80",
+            "function": {
+              "name": "test",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 817,
+        "completion_tokens": 14,
+        "total_tokens": 831,
+        "cost": 8.893e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.893e-05,
+          "upstream_inference_prompt_cost": 7.353e-05,
+          "upstream_inference_completions_cost": 1.54e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638666-b8yp2MURmVuxwCRlvj3w"
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_61f02cb1f1ec41aab5f18ec2",
+            "function": {
+              "name": "submit",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 865,
+        "completion_tokens": 13,
+        "total_tokens": 878,
+        "cost": 9.215e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 9.215e-05,
+          "upstream_inference_prompt_cost": 7.785e-05,
+          "upstream_inference_completions_cost": 1.43e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638668-PgL0SXE7bJhp9tW8oPUj"
+    }
+  ],
+  "events": [
+    {
+      "action": 1,
+      "response": 1,
+      "tool": "view",
+      "arguments": {
+        "start": 1,
+        "end": 10
+      },
+      "observation": {
+        "error": "Invalid inclusive line range; source has 2 lines. Source unchanged."
+      }
+    },
+    {
+      "action": 2,
+      "response": 2,
+      "tool": "view",
+      "arguments": {
+        "start": 1,
+        "end": 2
+      },
+      "observation": {
+        "source": "1: def flatten_once(groups):\n2:     return groups[0] if groups else []",
+        "total_lines": 2
+      }
+    },
+    {
+      "action": 3,
+      "response": 3,
+      "tool": "edit",
+      "arguments": {
+        "start": 1,
+        "end": 2,
+        "replacement": "def flatten_once(groups):\n    result = []\n    for group in groups:\n        for item in group:\n            result.append(item)\n    return result"
+      },
+      "observation": {
+        "accepted": true,
+        "source": "1: def flatten_once(groups):\n2:     result = []\n3:     for group in groups:\n4:         for item in group:\n5:             result.append(item)\n6:     return result",
+        "total_lines": 6
+      }
+    },
+    {
+      "action": 4,
+      "response": 4,
+      "tool": "test",
+      "arguments": {},
+      "observation": {
+        "error": "test_timeout",
+        "passed": false,
+        "state": "No tests ran. Source unchanged.",
+        "next_action": "This transient timeout happened once. Retry test with empty arguments."
+      }
+    },
+    {
+      "action": 5,
+      "response": 5,
+      "tool": "test",
+      "arguments": {},
+      "observation": {
+        "passed": true,
+        "checks": 2,
+        "failures": [],
+        "error": null
+      }
+    },
+    {
+      "action": 6,
+      "response": 6,
+      "tool": "submit",
+      "arguments": {},
+      "observation": {
+        "submitted": true
+      }
+    }
+  ],
+  "fault": "test-timeout",
+  "fault_exposed": true,
+  "failed_actions": 2,
+  "repeated_actions": 0,
+  "id": "flatten-once--actionable--2",
+  "condition": "actionable",
+  "repeat": 2
+}

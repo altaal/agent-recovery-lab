@@ -1,0 +1,11 @@
+id,task,condition,repeat,passed,status,actions,model_calls,prompt_tokens,completion_tokens,reported_cost_usd,fault_exposed,failed_actions,repeated_actions
+clamp--terse--1,clamp,terse,1,True,passed,5,5,3141,156,0.00045429,True,2,0
+clamp--actionable--1,clamp,actionable,1,True,passed,6,6,4032,175,0.00055538,True,2,0
+safe-mean--terse--1,safe-mean,terse,1,True,passed,4,4,2386,116,0.00034234,True,1,0
+safe-mean--actionable--1,safe-mean,actionable,1,True,passed,5,5,3199,129,0.00042981,True,1,0
+flatten-once--terse--1,flatten-once,terse,1,True,passed,7,6,4094,213,0.00060276,True,2,0
+flatten-once--actionable--1,flatten-once,actionable,1,True,passed,6,6,4060,167,0.0005491,True,2,0
+palindrome--terse--1,palindrome,terse,1,True,passed,6,6,3978,180,0.0005560200000000001,True,1,0
+palindrome--actionable--1,palindrome,actionable,1,True,passed,6,6,4057,167,0.00054883,True,1,0
+parse-pairs--terse--1,parse-pairs,terse,1,True,passed,6,6,4574,270,0.00070866,True,1,0
+parse-pairs--actionable--1,parse-pairs,actionable,1,True,passed,6,6,4670,271,0.0007184,True,1,0

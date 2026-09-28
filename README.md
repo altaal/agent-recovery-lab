@@ -79,4 +79,39 @@ Tests verify one-time fault injection, unchanged source, retrievable truncated
 lines, and exposure accounting. They use no model key. The underlying agent's
 container and scoring tests run in its own repository.
 
-The measured results and failure notes are added after the live runs finish.
+## Measured results
+
+The five-scenario pilot passed 5/5 attempts in each condition. Every attempt
+encountered its fault. [Pilot traces and table](results/week3-pilot/).
+
+The full experiment used ten scenarios and three repetitions, September 28, 2026:
+
+| Feedback | All declared attempts | Encountered fault | Passed among exposed | Mean actions |
+| --- | ---: | ---: | ---: | ---: |
+| Terse | 26/30 (86.7%) | 28 | 26/28 (92.9%) | 6.27 |
+| Actionable | 29/30 (96.7%) | 29 | 29/29 (100%) | 6.30 |
+
+[Full per-task table](results/week4-full/summary.md),
+[CSV](results/week4-full/results.csv), [all traces](results/week4-full/),
+and [what failed / what I learned](FAILURES.md).
+
+Two terse palindrome attempts produced correct code but repeatedly edited it
+instead of submitting. Three other attempts stopped on API transport/response
+errors before fault exposure; those remain failures in the headline denominator.
+The saved error does not identify the underlying network/provider cause.
+
+The clearer feedback did better on this small suite, but was not faster and did
+not reduce the recorded failed-action count. Do not generalize a difference on ten
+authored tasks into a reliability guarantee. See the
+[plain-language six-week guide](https://github.com/altaal/aci-patch-agent/blob/main/WEEK_BY_WEEK.md)
+for how this experiment connects to the other artifacts.
+
+Regenerate either published table without a model key:
+
+```sh
+python -m agent_recovery_lab.run --report-only --output results/week3-pilot
+python -m agent_recovery_lab.run --report-only --output results/week4-full
+```
+
+Out of scope: new agent architecture, production incident simulation, parallel
+agents, arbitrary repositories, model training, and claims about security behavior.

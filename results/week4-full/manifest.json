@@ -1,0 +1,494 @@
+{
+  "created_at": "2026-09-28T23:35:00.086677+00:00",
+  "task_sha256": "f1b48ba279bf1a1fa7f2480fee3d30ae2c2fe3ac51cde905fd10e5ae363ee4f5",
+  "agent_source_sha256": {
+    "__init__.py": "09ee1078e8eb0f4663f67e368746f5317d4ddd5988c415e1751dcbf263f63f8c",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "ablation.py": "234bf2c6d3f7ecccfc9ef9cd9eefa068087dddaafe8dcaf5ba5a12e11ed0e1de",
+    "agent.py": "31e3ba7be07c602ce08d6395d525c4f6db38b8d0280acd70bcdc185564824176",
+    "cli.py": "c59dd885d76d0355c34d9d9b187b20544e0cedca93b9d96e5b57b35d9bd8ab16",
+    "client.py": "fb9accbf5917a8d5522ba64dcc11e2ce5960f9a20c535387e41bccc85bedbccf",
+    "eval_tasks.py": "f7db472a8ac1ab3b1b2188a170601d5568153d61a2f7df3a2923276bb1a3c664",
+    "experiment.py": "81a3b9230469d5db32eb7e862a4724b83d5ecf6ec067a065faa44cc87522d30f",
+    "report.py": "94a81d3a9dfa871a518593c776fb48123570072771e06cba355a30f399a5ffa5",
+    "sandbox.py": "a9ae142e23c59dfb87c540355417e5356d4d6e345e673df86d8c097c0c06bb6a",
+    "tasks.py": "b2586719cb3aa9b98d4d3774878143a612b0586fd364c805a792570511e01c8e",
+    "tools.py": "a98c0788dcf1dbd270bba6b257aab1711b05f504429f17b443cfe88cc148d791"
+  },
+  "conditions": [
+    "terse",
+    "actionable"
+  ],
+  "attempts": [
+    {
+      "id": "clamp--terse--1",
+      "task": "clamp",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "clamp--actionable--1",
+      "task": "clamp",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "safe-mean--terse--1",
+      "task": "safe-mean",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "safe-mean--actionable--1",
+      "task": "safe-mean",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "flatten-once--terse--1",
+      "task": "flatten-once",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "flatten-once--actionable--1",
+      "task": "flatten-once",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "count-words--terse--1",
+      "task": "count-words",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "count-words--actionable--1",
+      "task": "count-words",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "rotate-left--terse--1",
+      "task": "rotate-left",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "rotate-left--actionable--1",
+      "task": "rotate-left",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "palindrome--terse--1",
+      "task": "palindrome",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "palindrome--actionable--1",
+      "task": "palindrome",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "parse-pairs--terse--1",
+      "task": "parse-pairs",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "parse-pairs--actionable--1",
+      "task": "parse-pairs",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "running-total--terse--1",
+      "task": "running-total",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "running-total--actionable--1",
+      "task": "running-total",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "strip-suffix--terse--1",
+      "task": "strip-suffix",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "strip-suffix--actionable--1",
+      "task": "strip-suffix",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "transpose--terse--1",
+      "task": "transpose",
+      "condition": "terse",
+      "repeat": 1
+    },
+    {
+      "id": "transpose--actionable--1",
+      "task": "transpose",
+      "condition": "actionable",
+      "repeat": 1
+    },
+    {
+      "id": "clamp--terse--2",
+      "task": "clamp",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "clamp--actionable--2",
+      "task": "clamp",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "safe-mean--terse--2",
+      "task": "safe-mean",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "safe-mean--actionable--2",
+      "task": "safe-mean",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "flatten-once--terse--2",
+      "task": "flatten-once",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "flatten-once--actionable--2",
+      "task": "flatten-once",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "count-words--terse--2",
+      "task": "count-words",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "count-words--actionable--2",
+      "task": "count-words",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "rotate-left--terse--2",
+      "task": "rotate-left",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "rotate-left--actionable--2",
+      "task": "rotate-left",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "palindrome--terse--2",
+      "task": "palindrome",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "palindrome--actionable--2",
+      "task": "palindrome",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "parse-pairs--terse--2",
+      "task": "parse-pairs",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "parse-pairs--actionable--2",
+      "task": "parse-pairs",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "running-total--terse--2",
+      "task": "running-total",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "running-total--actionable--2",
+      "task": "running-total",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "strip-suffix--terse--2",
+      "task": "strip-suffix",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "strip-suffix--actionable--2",
+      "task": "strip-suffix",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "transpose--terse--2",
+      "task": "transpose",
+      "condition": "terse",
+      "repeat": 2
+    },
+    {
+      "id": "transpose--actionable--2",
+      "task": "transpose",
+      "condition": "actionable",
+      "repeat": 2
+    },
+    {
+      "id": "clamp--terse--3",
+      "task": "clamp",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "clamp--actionable--3",
+      "task": "clamp",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "safe-mean--terse--3",
+      "task": "safe-mean",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "safe-mean--actionable--3",
+      "task": "safe-mean",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "flatten-once--terse--3",
+      "task": "flatten-once",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "flatten-once--actionable--3",
+      "task": "flatten-once",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "count-words--terse--3",
+      "task": "count-words",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "count-words--actionable--3",
+      "task": "count-words",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "rotate-left--terse--3",
+      "task": "rotate-left",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "rotate-left--actionable--3",
+      "task": "rotate-left",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "palindrome--terse--3",
+      "task": "palindrome",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "palindrome--actionable--3",
+      "task": "palindrome",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "parse-pairs--terse--3",
+      "task": "parse-pairs",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "parse-pairs--actionable--3",
+      "task": "parse-pairs",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "running-total--terse--3",
+      "task": "running-total",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "running-total--actionable--3",
+      "task": "running-total",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "strip-suffix--terse--3",
+      "task": "strip-suffix",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "strip-suffix--actionable--3",
+      "task": "strip-suffix",
+      "condition": "actionable",
+      "repeat": 3
+    },
+    {
+      "id": "transpose--terse--3",
+      "task": "transpose",
+      "condition": "terse",
+      "repeat": 3
+    },
+    {
+      "id": "transpose--actionable--3",
+      "task": "transpose",
+      "condition": "actionable",
+      "repeat": 3
+    }
+  ],
+  "experiment": "tool-fault-feedback",
+  "pilot": false,
+  "agent_revision": "42a2683b643b3b9af2f034529032444accf0c849",
+  "model": "qwen/qwen3-next-80b-a3b-instruct",
+  "temperature": 0,
+  "max_actions": 15,
+  "max_tokens": 1200,
+  "max_total_tokens": 32000,
+  "show_initial_source": false,
+  "faults": {
+    "clamp": "test-timeout",
+    "safe-mean": "test-timeout",
+    "flatten-once": "test-timeout",
+    "count-words": "test-timeout",
+    "rotate-left": "test-timeout",
+    "palindrome": "truncated-view",
+    "parse-pairs": "truncated-view",
+    "running-total": "truncated-view",
+    "strip-suffix": "truncated-view",
+    "transpose": "truncated-view"
+  },
+  "system_prompt": "You repair one small Python function in solution.py.\nUse view to read numbered lines, edit to replace an inclusive range, test to run\nexamples, and submit when finished. Make exactly one tool call per response.\nTool observations describe the actual current state. Correct a refused edit using\nthat feedback. Tests check only examples; implement the entire issue specification.\nKeep the named function and signature. Use only Python's standard library.\nYou cannot edit the evaluator. Submit the code, not a verbal claim of success.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "view",
+        "description": "Show numbered lines of solution.py.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "integer"
+            },
+            "end": {
+              "type": "integer"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "edit",
+        "description": "Replace an inclusive line range. Invalid Python syntax is rejected without changing the source.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "integer"
+            },
+            "end": {
+              "type": "integer"
+            },
+            "replacement": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "start",
+            "end",
+            "replacement"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "test",
+        "description": "Run example checks in an isolated container. Passing examples is not final success.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "submit",
+        "description": "Finish and submit the current source for separate evaluation.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "image": {
+    "image": "python@sha256:da047cb8f9d1d98e5c070f5300ba9f7274e33b8fc0e5be5ed88740aed1b95ba9",
+    "image_id": "sha256:da047cb8f9d1d98e5c070f5300ba9f7274e33b8fc0e5be5ed88740aed1b95ba9",
+    "repo_digests": [
+      "python@sha256:da047cb8f9d1d98e5c070f5300ba9f7274e33b8fc0e5be5ed88740aed1b95ba9"
+    ],
+    "architecture": "arm64"
+  },
+  "recovery_source_sha256": {
+    "__init__.py": "69c0a91ca0927122850253df8e41335d311d99f8e90db05256a5ac95ca5f9a11",
+    "faults.py": "cb66b40ce0354a098593c82a41101d70a64d9606493494d79b2972d147af54ba",
+    "run.py": "806da2b4907c6fc169d916af10cd2dfc7001ebcdea3bcd4d8ddc2b7f2482f998"
+  }
+}

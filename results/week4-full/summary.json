@@ -1,0 +1,24 @@
+{
+  "terse": {
+    "passed": 26,
+    "attempts": 30,
+    "pass_rate": 0.8666666666666667,
+    "mean_actions": 6.266666666666667,
+    "actions_observed": 30,
+    "fault_exposed": 28,
+    "passed_when_exposed": 26,
+    "failed_actions": 40,
+    "repeated_actions": 0
+  },
+  "actionable": {
+    "passed": 29,
+    "attempts": 30,
+    "pass_rate": 0.9666666666666667,
+    "mean_actions": 6.3,
+    "actions_observed": 30,
+    "fault_exposed": 29,
+    "passed_when_exposed": 29,
+    "failed_actions": 46,
+    "repeated_actions": 2
+  }
+}

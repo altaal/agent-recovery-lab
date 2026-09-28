@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "task": "safe-mean",
+  "issue": "Return the arithmetic mean of a list of numbers as a float. Raise ValueError for an empty list.",
+  "created_at": "2026-09-28T23:35:34.407635+00:00",
+  "model": "qwen/qwen3-next-80b-a3b-instruct",
+  "show_initial_source": false,
+  "max_actions": 15,
+  "max_total_tokens": 32000,
+  "status": "api_error",
+  "passed": false,
+  "submitted": false,
+  "actions": 1,
+  "model_calls": 1,
+  "prompt_tokens": 477,
+  "completion_tokens": 25,
+  "reported_cost_usd": 7.043e-05,
+  "seconds": 28.933,
+  "initial_source": "def safe_mean(numbers):\n    return sum(numbers) // len(numbers)\n",
+  "final_source": "def safe_mean(numbers):\n    return sum(numbers) // len(numbers)\n",
+  "evaluation": {
+    "passed": false,
+    "checks": 6,
+    "failures": [
+      {
+        "case": 1,
+        "input": "([1, 2],)",
+        "expected": "1.5",
+        "actual": {
+          "value": 1,
+          "exception": null
+        }
+      },
+      {
+        "case": 2,
+        "input": "([4],)",
+        "expected": "4.0",
+        "actual": {
+          "value": 4,
+          "exception": null
+        }
+      },
+      {
+        "case": 3,
+        "input": "([],)",
+        "expected": "ValueError",
+        "actual": {
+          "exception": "ZeroDivisionError"
+        }
+      },
+      {
+        "case": 4,
+        "input": "([-2, 1],)",
+        "expected": "-0.5",
+        "actual": {
+          "value": -1,
+          "exception": null
+        }
+      },
+      {
+        "case": 5,
+        "input": "([0, 0],)",
+        "expected": "0.0",
+        "actual": {
+          "value": 0,
+          "exception": null
+        }
+      }
+    ],
+    "error": null
+  },
+  "patch": "",
+  "responses": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_b41f8595938b4991b0719448",
+            "function": {
+              "name": "view",
+              "arguments": "{\"start\": 1, \"end\": 10}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 477,
+        "completion_tokens": 25,
+        "total_tokens": 502,
+        "cost": 7.043e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.043e-05,
+          "upstream_inference_prompt_cost": 4.293e-05,
+          "upstream_inference_completions_cost": 2.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "DeepInfra",
+      "id": "gen-1790638505-Z3cjml3CzElXD0ZnAOEJ"
+    }
+  ],
+  "events": [
+    {
+      "action": 1,
+      "response": 1,
+      "tool": "view",
+      "arguments": {
+        "start": 1,
+        "end": 10
+      },
+      "observation": {
+        "error": "Invalid inclusive line range; source has 2 lines. Source unchanged."
+      }
+    },
+    {
+      "error": "api_transport_or_response_error"
+    }
+  ],
+  "fault": "test-timeout",
+  "fault_exposed": false,
+  "failed_actions": 1,
+  "repeated_actions": 0,
+  "id": "safe-mean--actionable--1",
+  "condition": "actionable",
+  "repeat": 1
+}
