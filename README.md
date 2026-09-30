@@ -6,6 +6,10 @@ This repository runs the [ACI Patch Agent](https://github.com/altaal/aci-patch-a
 at a pinned commit. It owns the controlled faults and comparison, not a second
 agent implementation. All scenarios use the same model, tools, tasks, and limits.
 
+This repository covers Weeks 3–4 of the
+[shared six-week plan](https://github.com/altaal/aci-patch-agent/blob/main/WEEK_BY_WEEK.md).
+In the sibling-project workspace, its canonical editable source is `../WEEK_BY_WEEK.md`.
+
 ## Run
 
 Requires Python 3.11+, Docker, and `OPENROUTER_API_KEY` set in the environment.
