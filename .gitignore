@@ -7,3 +7,4 @@ dist/
 .env*
 runs/
 .DS_Store
+.mypy_cache/

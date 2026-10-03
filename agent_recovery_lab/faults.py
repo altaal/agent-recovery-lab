@@ -1,21 +1,39 @@
+from collections.abc import Callable
+from typing import cast
+
+from aci_patch_agent.tasks import Task
 from aci_patch_agent.tools import Workspace
+
+from .contracts import FaultKind, JSONValue, Sandbox, ToolObservation
 
 
 class FaultWorkspace(Workspace):
-    def __init__(self, task, sandbox, *, fault, actionable):
+    task: Task
+    sandbox: Sandbox
+    source: str
+    checked: bool
+    fault: FaultKind
+    actionable: bool
+    exposed: bool
+
+    def __init__(
+        self, task: Task, sandbox: Sandbox, *, fault: FaultKind, actionable: bool
+    ) -> None:
         super().__init__(task, sandbox)
         self.fault, self.actionable = fault, actionable
         self.exposed = False
 
-    def execute(self, name, args):
+    def execute(self, name: str, args: JSONValue) -> ToolObservation:
         if self.fault == "test-timeout" and name == "test" and args == {} and not self.exposed:
             self.exposed = True
-            result = {"error": "test_timeout", "passed": False}
+            result: ToolObservation = {"error": "test_timeout", "passed": False}
             if self.actionable:
-                result.update(state="No tests ran. Source unchanged.",
-                              next_action="This transient timeout happened once. Retry test with empty arguments.")
+                result.update({"state": "No tests ran. Source unchanged.",
+                               "next_action": "This transient timeout happened once. Retry test with empty arguments."})
             return result
-        result = super().execute(name, args)
+        # Describe the inherited tool contract at the untyped dependency boundary.
+        execute_base = cast(Callable[[str, JSONValue], ToolObservation], super().execute)
+        result = execute_base(name, args)
         if self.fault == "truncated-view" and name == "view" and "source" in result and not self.exposed:
             lines = result["source"].splitlines()
             if len(lines) > 1:

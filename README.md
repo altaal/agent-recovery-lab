@@ -2,6 +2,9 @@
 
 Does explaining a tool failure help the same coding agent finish its task?
 
+Start with the [code-flow walkthrough](TECHNICAL_OVERVIEW.md): directory layout,
+exact execution path, source excerpts, and the recorded clamp and palindrome runs.
+
 This repository runs the [ACI Patch Agent](https://github.com/altaal/aci-patch-agent)
 at a pinned commit. It owns the controlled faults and comparison, not a second
 agent implementation. All scenarios use the same model, tools, tasks, and limits.
@@ -31,6 +34,15 @@ experiment is ten scenarios, two conditions, three attempts per condition:
 ```sh
 python -m agent_recovery_lab.run --output runs/full
 ```
+
+Run only clamp in both modes (three attempts per mode, six total):
+
+```sh
+python -m agent_recovery_lab.run --task clamp --output runs/clamp
+```
+
+Add `--pilot` for one attempt per mode (two total). `--task` accepts any task ID;
+without it, the full and pilot suites remain as described above.
 
 Output directories must be new. The runner never replaces earlier attempts.
 
@@ -76,11 +88,17 @@ code hashes, task hash, and pinned agent revision before execution.
 ## Check
 
 ```sh
+python -m pip install ".[dev]"
+python -m mypy
 python -m unittest discover -s tests -v
 ```
 
+The recovery package and tests use annotated functions, typed dictionary fields,
+and sandbox/client protocols. CI checks them with mypy in strict mode; the
+untyped-call exception is limited to the pinned ACI Patch Agent dependency.
+
 Tests verify one-time fault injection, unchanged source, retrievable truncated
-lines, and exposure accounting. They use no model key. The underlying agent's
+lines, exposure accounting, and CLI task selection with saved attempt files. They use no model key. The underlying agent's
 container and scoring tests run in its own repository.
 
 ## Measured results

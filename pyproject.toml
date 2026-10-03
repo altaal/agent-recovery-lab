@@ -10,5 +10,21 @@ requires-python = ">=3.11"
 license = "MIT"
 dependencies = ["aci-patch-agent @ git+https://github.com/altaal/aci-patch-agent.git@42a2683b643b3b9af2f034529032444accf0c849"]
 
+[project.optional-dependencies]
+dev = ["mypy>=1.14,<2"]
+
 [tool.setuptools.packages.find]
 include = ["agent_recovery_lab*"]
+
+
+[tool.mypy]
+python_version = "3.11"
+files = ["agent_recovery_lab", "tests"]
+strict = true
+# The pinned dependency is untyped; keep strict call checks for local code.
+untyped_calls_exclude = ["aci_patch_agent"]
+
+[[tool.mypy.overrides]]
+module = ["aci_patch_agent.*"]
+follow_untyped_imports = true
+ignore_errors = true
